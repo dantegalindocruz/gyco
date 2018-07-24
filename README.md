@@ -22,6 +22,8 @@ The reason why this mission is so important to me is because I myself was a vict
 I also was someone who didn't have a lot of confidence in myself. But thanks to my friend Melanie Dobbs Gibbs, who taught me how to crochet 13 years ago when I was homeless, I'm now confident enough to not only craft anywhere, but I'm confident to teach these classes and give this awesome gift to others. 
 
 Last month my friend Melanie and I were featured in _Chatter Magazine_ and I shared my story about how I became a passionate crafter: This page is no longer up but here's a photo of the article: 
+<br>
+
 ![Chatter Magazie](imgs/chatter.jpg)
 
 If you or someone else you know are in the Chattanooga area and are interested in participating in my <strong> Get Yo Craft On </strong> workshops, DM on Instagram @danteknits. 
