@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+
+     img{
+       display: block;
+       margin: 0 auto;
+     }
+     .hide {
+      transform: translateX(400px);
+      opacity: 0;
+      transition: opacity 1s ease, transform 1s ease;
+      display: none;
+
+     }
+
+     .active{
+       opacity:1;
+       transition: opacity 1s ease/*, transform 1s ease*/;
+     }
+
+     /* #gallery{
+       overflow: hidden;
+       height: 400px;
+     } */
+
+  </style>
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="gallery">
+     <img src="imgs/art1.jpg"  class="active" alt="">
+     <img src="imgs/art2.jpg" alt="">
+     <img src="imgs/art3.jpg" alt="">
+     <img src="imgs/art4.jpg" alt="">
+     <img src="imgs/art5.jpg" alt="">
+   </div>
+
+   <p>Hello World</p>
+   <script>
+     var imgNodeList = document.querySelectorAll('img');
+
+     function convertToArray (nodeList){
+       var tempArray = [];
+       nodeList.forEach((node, index) => {
+         tempArray[index] = node;
+       });
+       return tempArray;
+     }
+
+     function slideShow(images){
+       images.forEach((image, index) => {
+         if(image.className === 'active'){
+           setTimeout(()=>{
+             image.removeAttribute('class', 'active');
+             image.setAttribute('class', 'hide');
+           }, 3000);
+           } else {
+             setTimeout(() => {
+             image.removeAttribute('class', 'hide');
+             image.setAttribute('class', 'active');
+           },3000);
+           }
+       });
+     }
+
+   //   function switchClass(image){
+   //   if(img.className === 'active'){
+   //     img.removeAttribute('class', 'active');
+   //     img.setAttribute('class', 'hide');
+   //   } else {
+   //     img.removeAttribute('class', 'hide');
+   //     img.setAttribute('class', 'active');
+   //   }
+   // }
+     var imgArray = convertToArray(imgNodeList);
+     setInterval(()=> {slideShow(imgArray)}, 2000);
+   </script>
+</body>
+</html>

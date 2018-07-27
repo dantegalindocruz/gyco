@@ -1,15 +1,14 @@
 var imageArray = [];
 var imgNodeList = document.querySelectorAll('#slider .slider-img');
 var incrementer = 0;
-
-//Hides the current images 
+//Hides the current images
 function hideImages(imgArray){
-  /*imgArray.forEach(img => {
+  imgArray.forEach(img => {
      img.style.display = 'none';
-  });*/
- for(var i=1; i< imgArray.length; i++){
-  imgArray[i].style.display='none';
- }
+  });
+ // for(var i=1; i< imgArray.length; i++){
+ //  imgArray[i].style.display='none';
+ // }
 }
 
 //converts nodeList into an array
@@ -27,10 +26,9 @@ function hidePreviousImage(img){
   img.style.display= 'none';
 }
 
-//Starts the slide show
+//Starts the slide show  TODO: transition doesn't work on display, so use a combination of display and opacity for slideshow
 function slideShow(imgArray){
 console.log('just entered the function');
-
  if(incrementer < imgArray.length){
    if(incrementer === 0){
      imgArray[incrementer].style.display='block';
@@ -44,14 +42,13 @@ console.log('just entered the function');
     hidePreviousImage(imgArray[incrementer-1]);
     incrementer = 0;
     imgArray[incrementer].style.display='block';
- } 
+ }
 incrementer++;
+setTimeout(() => {slideShow(imageArray)}, 2000);
 }
 
 
 
 imageArray = createArray(imgNodeList);
 hideImages(imageArray);
-setInterval(() => {slideShow(imageArray)}, 5000);
-
-
+slideShow(imageArray);
