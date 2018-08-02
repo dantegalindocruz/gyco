@@ -100,12 +100,13 @@
   <div class="container" id="contact-section">
        <div id="contact">
          <p>I know you may be thinking, "This must be too good to be true!", and for that reason you may have a few questions for me. Well don't hesitate any longer. Do me a favor and send me a message and I'll get back to you at my earliest convenience. With that being, I look forward to seeing you in your first class this upcoming Saturday. Take care</p>
-         <form>
+         <form method="POST" name="email_form" action="php/email.php">
             <input type="text" name="first_name" placeholder="First Name">
             <input type="text" name="last_name" placeholder="Last Name">
+            <input type="text" name="email" placeholder="you@example.com">
             <input type="text" name="subject" placeholder="i.e. Knitting help">
-            <textarea name="body" placeholder="What's on your mind?"></textarea>
-            <input type="submit">
+            <textarea name="message" placeholder="What's on your mind?"></textarea>
+            <input type="submit" value="Send Message">
          </form>
        </div>
   </div>
