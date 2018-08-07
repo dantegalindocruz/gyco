@@ -12,27 +12,27 @@ font-family: 'Fugaz One', cursive;
 }
 
 header{
- height: 60px;
+ height: 160px;
  padding:2px;
 }
 
 h1{
- font-size:3rem;
+ font-size:3em;
+ margin-bottom: 10px;
 }
 
 nav{
   background-color: #000;
   height:120px;
-  padding: 5px 10px;
+  boder: 1px solid black;
+  padding: 10px 0;
 }
 
 nav ul {
-  float:right;
+  font-size: 1.5em;
+  margin: 0 auto;
   list-style: none;
   color: #fff;
-  width: 60%;
-  /*border: 1px solid red;*/
-  text-align: center;
 }
 
 nav ul li{
@@ -76,21 +76,31 @@ margin: 0 auto;
  background-color: #843AB4;
 }
 
-.content-box{
+.container p{
+  font-size: 1.3em;
+  line-height: 2.3em;
+}
 
+
+.content-box{
  width: 40%;
  float: left;
  margin: 3% 5%;
  padding: 20px;
 }
 
+.content-box li{
+  font-size: 1.4em;
+  line-height: 1.5em;
+}
+
 .content-box h2{
  font-size: 2em;
 }
 
-#main-section p, ul{
-  line-height: 2.3em;
-  font-size: 1.5rem;
+.content-box h3{
+  margin-top: 5px;
+  font-size: 1.3em;
 }
 
 #main-section ul{
@@ -109,21 +119,18 @@ margin-left: 10px;
 }
 
 #about-section .content-box p{
-
-  line-height: 1.15em;
-  font-size: 1.3rem;
+  line-height: 1.3em;
 }
 
 #classes-section {
   padding-top: 10px;
 }
 #classes-section .title{
-  font-size: 3rem;
+  font-size: 3em;
 }
 
 #classes-section .content-box ul{
   margin-left:30px;
-  line-height: 1.5em;
 }
 
 #contact-section{
@@ -134,7 +141,6 @@ margin-left: 10px;
 #contact-section #contact p{
   margin: 0 auto 20px auto;
   line-height: 1.5em;
-  font-size: 1.5rem;
   width: 50%;
 }
 #contact-section form{
@@ -171,4 +177,16 @@ margin-left: 10px;
 }
 
 
-/* Mobile Layout *?
+/*******Mobile Layout***********/
+
+/*   Smart Phones     */
+@media screen and (max-width: 800px){
+  #slider{
+    display: none;
+  }
+
+  .content-box{
+    width: 100%;
+  }
+
+}
