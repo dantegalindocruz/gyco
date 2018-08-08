@@ -68,8 +68,11 @@ margin: 0 auto;
 
 .container{
  width: 100%;
- height:600px;
- clear:both;
+ height:auto;
+ clear: both;
+ overflow: auto;
+ content: "";
+ display: table;
 }
 
 .container:nth-child(2n){
@@ -84,6 +87,7 @@ margin: 0 auto;
 
 .content-box{
  width: 40%;
+ height: auto;
  float: left;
  margin: 3% 5%;
  padding: 20px;
@@ -180,13 +184,29 @@ margin-left: 10px;
 /*******Mobile Layout***********/
 
 /*   Smart Phones     */
-@media screen and (max-width: 800px){
+@media screen and (max-width: 870px){
   #slider{
     display: none;
   }
-
+  .container{
+    width: 100%;
+  }
   .content-box{
     width: 100%;
+    margin: 10px auto;
+  }
+
+
+  .content-box p{
+    margin: 20px;
+  }
+
+  #contact-section form{
+    width: 100%;
+  }
+
+  #contact-section #contact p{
+    width: 80%;
   }
 
 }
