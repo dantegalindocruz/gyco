@@ -1,3 +1,51 @@
+/************************ Hamburger Menu ********************************/
+var hamburgerMenu = document.querySelector('#hamburger-menu ul li #hamburger-icon');
+var links = document.querySelector('#hamburger-menu ul li #links');
+var hamburgerMenuIcon = document.querySelectorAll('#hamburger-icon div');
+
+hamburgerMenu.addEventListener('click', (event) => {
+      event.preventDefault();
+     if(links.style.left === '-700px'){
+       showMenu(links);
+       changeIconColor(hamburgerMenuIcon);
+     } else{
+       hideMenu(links);
+       removeIconColor(hamburgerMenuIcon);
+     }
+
+});
+
+hamburgerMenu.addEventListener('blur', () => {
+  if(links.style.left === '0px'){
+       hideMenu(links);
+       removeIconColor(hamburgerMenuIcon);
+     }
+});
+
+function showMenu(node) {
+  node.style.left = 0;
+  node.style.transition = '1.5s ease';
+}
+
+function hideMenu(node) {
+  node.style.left='-700px';
+  node.style.transition='1.5s ease';
+}
+
+function changeIconColor(nodeList){
+  for(var i =0; i < nodeList.length; i++){
+    nodeList[i].style.border= '1px solid #843AB4';
+  }
+}
+
+function removeIconColor(nodeList){
+  for(var i =0; i < nodeList.length; i++){
+    nodeList[i].style.border= '1px solid #fff';
+  }
+}
+
+
+/************************ Slide Show ********************************/
 var imageArray = [];
 var imgNodeList = document.querySelectorAll('#slider .slider-img');
 var incrementer = 0;
@@ -6,9 +54,6 @@ function hideImages(imgArray){
   imgArray.forEach(img => {
      img.style.display = 'none';
   });
- // for(var i=1; i< imgArray.length; i++){
- //  imgArray[i].style.display='none';
- // }
 }
 
 //converts nodeList into an array
@@ -28,7 +73,6 @@ function hidePreviousImage(img){
 
 //Starts the slide show  TODO: transition doesn't work on display, so use a combination of display and opacity for slideshow
 function slideShow(imgArray){
-console.log('just entered the function');
  if(incrementer < imgArray.length){
    if(incrementer === 0){
      imgArray[incrementer].style.display='block';

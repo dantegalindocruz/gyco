@@ -11,69 +11,85 @@ body{
   text-align: center;
 }
 
+#wrapper {
+  font-family: Arial, sans-serif;
+}
+
 #wrapper h1, h2, h3, nav ul li{
 font-family: 'Fugaz One', cursive;
 }
 
+img{
+  display: block;
+}
+
 header{
+ display: flex;
+ flex-direction: column;
  height: auto;
  padding:2px;
 }
 
+
 h1{
  font-size:3em;
- margin-bottom: 10px;
 }
 
-nav{
+#reg-nav{
   background-color: #000;
   height:auto;
-  boder: 1px solid black;
-  padding: 10px 0;
 }
 
-nav ul {
+#reg-nav ul, #hamburger-menu ul {
   font-size: 1.5em;
-  margin: 0 auto;
   list-style: none;
   color: #fff;
 }
 
-nav ul li{
-    display: inline-block;
-    margin-left: 5%;
+#reg-nav ul{
+  display: flex;
+  justify-content: center;
 }
 
-nav ul li a{
+#reg-nav ul li{
+  flex-basis: 20%;
+  padding: 5px 0;
+}
+
+#reg-nav ul li a, #hamburger-menu ul li a{
   color: #fff;
   text-decoration: none;
   display: block;
-  height: 50px;
+  height: 40px;
 }
 
-nav ul li a:hover{
+#reg-nav ul li a:hover{
   border-bottom: 3px solid #fff;
 }
+
+.mobile{
+  display: none;
+}
+
 #active {
   display: block;
 }
 #slider{
+ display: flex;
+ justify-content: center;
  background: url("../imgs/knitting.jpg") no-repeat;
  background-position: center center;
  background-size: cover;
- width: 100%;
  height: 300px;
-}
-
-.slider-img{
-margin: 0 auto;
 }
 
 .container{
  display: flex;
  flex-direction: row;
  flex-wrap: wrap;
+ justify-content: space-evenly;
  height:auto;
+ padding: 20px 0;
 }
 
 .container:nth-child(2n){
@@ -82,15 +98,18 @@ margin: 0 auto;
 
 .container p{
   font-size: 1.3em;
-  line-height: 2.3em;
 }
 
 
 .content-box{
- width: 40%;
+ flex-basis: 40%;
+ margin: 10px 0;
+ align-self: center;
  height: auto;
- margin: 3% 5%;
- padding: 20px;
+}
+
+.content-box ul{
+  list-style-position: inside;
 }
 
 .content-box li{
@@ -114,7 +133,7 @@ margin-left: 10px;
 }
 
 #about-section img, #classes-section img{
-  display: block;
+ margin: 0 auto;
 }
 
 #about-section .content-box p{
@@ -129,83 +148,145 @@ margin-left: 10px;
   font-size: 3em;
 }
 
-#classes-section .content-box ul{
-  margin-left:30px;
-}
-
-#contact-section{
-  padding-top: 60px;
-  height: 700px;
-}
-
-#contact-section #contact p{
-  margin: 0 auto 20px auto;
-  line-height: 1.5em;
-  width: 50%;
-}
 #contact-section form{
-  padding: 20px 0;
-  width: 50%;
-  height: 380px;
-  margin: 0 auto;
-  background-color: rgba(255,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
 }
-#contact-section #contact input{
+#contact-section .content-box input{
   display: block;
-  border: 0;
+  height:30px;
+  margin-bottom: 20px;
 }
 
-#contact-section #contact input[type="text"]{
-  width: 80%;
-  height: 2em;
-  margin: 10px auto;
+#contact-section .content-box textarea{
+  height: 100px;
+  margin-bottom: 20px;
 }
 
-#contact-section #contact textarea{
-  display: block;
-  width: 80%;
-  height: 10em;
-  margin: 10px auto;
-  border: 0;
-}
-
-#contact-section #contact input[type="submit"]{
-  width: 20%;
-  height: 3em;
+#contact-section .content-box input[type="submit"]{
+  width: 100px;
+  height: 40px;
+  border:0;
   border-radius: 5px;
-  margin-left: 70px;
+  align-self: center;
 }
 
-
+#contact-section .content-box input[type="submit"]:hover{
+background-color: #000;
+color: #fff;
+}
 /*******Mobile Layout***********/
 
 /*   Smart Phones     */
 @media screen and (max-width: 870px){
+  #wrapper{
+    font-size: 1rem;
+  }
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+
   #slider{
     display: none;
   }
+
+  /* hamburger menu */
+  #hamburger-menu{
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    background-color: #000;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+  }
+  .mobile-main{
+    margin-top: 50px;
+  }
+
+  h1.mobile{
+    color: #fff;
+    font-size: 1.8rem;
+    flex-grow: 2;
+    align-self: center;
+  }
+
+  #hamburger-menu ul{
+    align-self: center;
+    flex-basis: 40px;
+  }
+
+  #hamburger-menu #hamburger-icon{
+    padding: 10px 0;
+    display: block;
+    height: auto;
+  }
+
+  #hamburger-menu ul li div{
+    margin-bottom: 5px;
+    border: 1px solid #fff;
+  }
+
+  #hamburger-menu ul li #hamburger-icon:hover div{
+    border:1px solid #843AB4;
+  }
+
+  #hamburger-menu ul li #links{
+    border: 1px solid #fff;
+    width: 60%;
+    height:100%;
+    background-color: #000;
+    position: fixed;
+    left: -700px;
+    top:51px;
+  }
+
+  #hamburger-menu ul li ul li a{
+    display: block;
+    padding: 20px 0;
+    height: 100px;
+    border-bottom: 1px solid #fff;
+  }
+
+  #hamburger-menu ul li ul li a:hover{
+    color: #000;
+    background-color: purple;
+  }
+
   .container{
     flex-wrap: nowrap;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
   }
 
-  .content-box{
-    width: 100%;
-    margin: 0;
+  #classes-section {
+    padding-top: 50px;
   }
-
   .content-box img{
-    margin: 0 auto;
-  }
-
-  #contact-section form{
-    width: 100%;
-  }
-
-  #contact-section #contact p{
     width: 80%;
+  }
+
+
+  #about-section .content-box:nth-child(4){
+    order:0;
+  }
+
+  #about-section .content-box:nth-child(3){
+    order:1;
+  }
+  #contact-section .content-box:nth-child(2){
+   width: 90%;
+  }
+
+  #contact-section .content-box input[type="submit"]{
+    width: 100px;
   }
 
 }

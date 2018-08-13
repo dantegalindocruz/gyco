@@ -1,21 +1,42 @@
 <!Doctype html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GET YO CRAFT ON!!! | Dante Knits</title>
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
   </head>
-  <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="css/style.css">
 <body>
   <div id="wrapper">
   <header>
-     <h1 class="center-text">GET YO CRAFT ON!!!</h1>
-     <nav>
+     <h1 class="center-text desktop">GET YO CRAFT ON!!!</h1>
+     <nav id="reg-nav" class="desktop">
        <ul class="center-text">
          <li><a href="#wrapper">Welcome</a></li>
          <li><a href="#about-section">About</a></li>
          <li><a href="#classes-section">Classes</a></li>
          <li><a href="#contact-section">Contact Me</a></li>
        </ul>
+     </nav>
+     <nav id="hamburger-menu" class="mobile">
+        <h1 class="center-text mobile">GET YO CRAFT ON!!!</h1>
+       <ul>
+         <li>
+           <a id="hamburger-icon" href="#">
+             <div></div>
+             <div></div>
+             <div></div>
+           </a>
+           <ul class="center-text" id="links">
+             <li><a href="#wrapper">Welcome</a></li>
+             <li><a href="#about-section">About</a></li>
+             <li><a href="#classes-section">Classes</a></li>
+             <li><a href="#contact-section">Contact Me</a></li>
+           </ul>
+        </li>
+       <ul>
      </nav>
   </header>
   <div id="slider">
@@ -30,7 +51,7 @@
   </div>
   <div class="container" id="main-section">
      <div class="content-box">
-        <h2 class="center-text">How you doing?</h2>
+        <h2 class="center-text mobile-main">How you doing?</h2>
         <p>Are you looking for a change in your life? Are you looking for a hobby to take your mind off your stressful week? Are you tired of paying money for those overpriced beanies? Have you ever thought about making a sweater? Or are you looking for a fun activity to do with your kids or your signficant other? Well my friend you are in the right page. Scroll down and check out the classes I offer.</p>
      </div>
      <div class="content-box">
@@ -39,6 +60,7 @@
           <li>Reduces chronic pain</li>
           <li>Reduces blood pressure</li>
           <li>Helps with depression</li>
+          <li>Helps with PTSD</li>
           <li>Helps with anxiety</li>
           <li>Form of meditation</li>
           <li>Burn 68 calories an hour</li>
@@ -98,8 +120,10 @@
        </div>
   </div>
   <div class="container" id="contact-section">
-       <div id="contact">
+       <div class="content-box">
          <p>I know you may be thinking, "This must be too good to be true!", and for that reason you may have a few questions for me. Well don't hesitate any longer. Do me a favor and send me a message and I'll get back to you at my earliest convenience. With that being, I look forward to seeing you in your first class this upcoming Saturday. Take care</p>
+       </div>
+       <div class="content-box">
          <form method="POST" name="email_form" action="php/email.php">
             <input type="text" name="first_name" placeholder="First Name">
             <input type="text" name="last_name" placeholder="Last Name">
