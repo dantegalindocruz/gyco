@@ -130,11 +130,11 @@
        </div>
        <div class="content-box">
          <form method="POST" name="email_form" action="php/email.php">
-            <input type="text" name="first_name" placeholder="First Name">
-            <input type="text" name="last_name" placeholder="Last Name">
-            <input type="text" name="email" placeholder="you@example.com">
-            <input type="text" name="subject" placeholder="i.e. Knitting help">
-            <textarea name="message" placeholder="What's on your mind?"></textarea>
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="text" name="email" placeholder="you@example.com" required>
+            <input type="text" name="subject" placeholder="i.e. Knitting help" required>
+            <textarea name="message" placeholder="What's on your mind?" required></textarea>
             <input type="submit" value="Send Message">
          </form>
        </div>
