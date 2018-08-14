@@ -167,7 +167,12 @@ margin-left: 10px;
   margin-bottom: 20px;
 }
 
+#contact-section .content-box input[type="text"]{
+  padding-left: 5px;
+}
+
 #contact-section .content-box textarea{
+  padding-left: 5px;
   height: 100px;
   margin-bottom: 20px;
 }
@@ -220,11 +225,13 @@ color: #fff;
   h1.mobile{
     color: #fff;
     font-size: 1.8rem;
-    flex-grow: 2;
+    flex-grow: 3;
     align-self: center;
   }
 
   #hamburger-menu ul{
+    flex-grow:1;
+    padding-right: 15px;
     height: 30px;
     cursor: pointer;
     align-self: center;
@@ -237,15 +244,14 @@ color: #fff;
     height: auto;
   }
 
-  #hamburger-menu ul li div{
+  #hamburger-menu ul li #hamburger-icon div{
     margin-bottom: 5px;
     border: 1px solid #fff;
   }
 
-
   #hamburger-menu ul li #links{
     border: 1px solid #fff;
-    width: 60%;
+    width: 100%;
     height:100%;
     background-color: #000;
     position: fixed;
@@ -253,16 +259,16 @@ color: #fff;
     top:51px;
   }
 
-  #hamburger-menu ul li ul li a{
+  #hamburger-menu ul li #links li a{
+    margin-left: 10px;
     display: block;
     padding: 20px 0;
     height: 100px;
-    border-bottom: 1px solid #fff;
   }
 
   #hamburger-menu ul li ul li a:hover{
     color: #000;
-    background-color: purple;
+    background-color: #E682FB;
   }
 
   .container{
@@ -271,9 +277,15 @@ color: #fff;
     justify-content: center;
     padding: 50px 20px;
   }
-
+  .content-box .photo{
+    width: 80%;
+  }
   .content-box h2{
     padding: 15px 0;
+  }
+
+  #about-section img, #classes-section img{
+   width: 100%;
   }
 
   #about-section .content-box, #classes-section .content-box{

@@ -1,10 +1,10 @@
 /************************ Hamburger Menu ********************************/
-var hamburgerMenu = document.querySelector('#hamburger-menu ul');
-var link = document.querySelector('#hamburger-menu ul li #links');
+var hamburgerMenu = document.querySelector('#hamburger-menu ul li #hamburger-icon');
+var links = document.querySelector('#hamburger-menu ul li #links');
 var hamburgerMenuIcon = document.querySelectorAll('#hamburger-icon div');
 
 hamburgerMenu.addEventListener('click', (event) => {
-      event.preventDefault();
+       event.preventDefault();
       if(links.style.left==="" || links.style.left==="-700px"){
         showMenu(links);
         changeIconColor(hamburgerMenuIcon);
@@ -18,7 +18,7 @@ hamburgerMenu.addEventListener('click', (event) => {
 hamburgerMenu.addEventListener('blur', () => {
   if(links.style.left === '0px'){
        hideMenu(links);
-       removeIconColor(hamburgerMenuIcon);
+       resetIconColor(hamburgerMenuIcon);
      }
 });
 
@@ -34,7 +34,7 @@ function hideMenu(node) {
 
 function changeIconColor(nodeList){
   for(var i =0; i < nodeList.length; i++){
-    nodeList[i].style.border= '1px solid #843AB4';
+    nodeList[i].style.border= '1px solid #E682FB';
   }
 }
 
