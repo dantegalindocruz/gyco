@@ -7,6 +7,10 @@
 body{
 }
 
+.space {
+  padding: 15px 0;
+}
+
 .center-text{
   text-align: center;
 }
@@ -21,6 +25,7 @@ font-family: 'Fugaz One', cursive;
 
 img{
   display: block;
+  border:1px solid #fff;
 }
 
 header{
@@ -93,7 +98,7 @@ h1{
 }
 
 .container:nth-child(2n){
- background-color: #843AB4;
+ background-color: #E682FB;
 }
 
 .container p{
@@ -148,7 +153,9 @@ margin-left: 10px;
   font-size: 3em;
 }
 
+
 #contact-section form{
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -218,6 +225,8 @@ color: #fff;
   }
 
   #hamburger-menu ul{
+    height: 30px;
+    cursor: pointer;
     align-self: center;
     flex-basis: 40px;
   }
@@ -233,9 +242,6 @@ color: #fff;
     border: 1px solid #fff;
   }
 
-  #hamburger-menu ul li #hamburger-icon:hover div{
-    border:1px solid #843AB4;
-  }
 
   #hamburger-menu ul li #links{
     border: 1px solid #fff;
@@ -266,13 +272,17 @@ color: #fff;
     padding: 50px 20px;
   }
 
+  .content-box h2{
+    padding: 15px 0;
+  }
+
+  #about-section .content-box, #classes-section .content-box{
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
   #classes-section {
     padding-top: 50px;
   }
-  .content-box img{
-    width: 80%;
-  }
-
 
   #about-section .content-box:nth-child(4){
     order:0;
@@ -281,6 +291,7 @@ color: #fff;
   #about-section .content-box:nth-child(3){
     order:1;
   }
+
   #contact-section .content-box:nth-child(2){
    width: 90%;
   }

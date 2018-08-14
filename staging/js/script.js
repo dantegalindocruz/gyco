@@ -1,17 +1,17 @@
 /************************ Hamburger Menu ********************************/
-var hamburgerMenu = document.querySelector('#hamburger-menu ul li #hamburger-icon');
-var links = document.querySelector('#hamburger-menu ul li #links');
+var hamburgerMenu = document.querySelector('#hamburger-menu ul');
+var link = document.querySelector('#hamburger-menu ul li #links');
 var hamburgerMenuIcon = document.querySelectorAll('#hamburger-icon div');
 
 hamburgerMenu.addEventListener('click', (event) => {
       event.preventDefault();
-     if(links.style.left === '-700px'){
-       showMenu(links);
-       changeIconColor(hamburgerMenuIcon);
-     } else{
-       hideMenu(links);
-       removeIconColor(hamburgerMenuIcon);
-     }
+      if(links.style.left==="" || links.style.left==="-700px"){
+        showMenu(links);
+        changeIconColor(hamburgerMenuIcon);
+      } else{
+        hideMenu(links);
+        resetIconColor(hamburgerMenuIcon);
+      }
 
 });
 
@@ -24,12 +24,12 @@ hamburgerMenu.addEventListener('blur', () => {
 
 function showMenu(node) {
   node.style.left = 0;
-  node.style.transition = '1.5s ease';
+  node.style.transition = '.5s ease';
 }
 
 function hideMenu(node) {
   node.style.left='-700px';
-  node.style.transition='1.5s ease';
+  node.style.transition='.5s ease';
 }
 
 function changeIconColor(nodeList){
@@ -38,7 +38,7 @@ function changeIconColor(nodeList){
   }
 }
 
-function removeIconColor(nodeList){
+function resetIconColor(nodeList){
   for(var i =0; i < nodeList.length; i++){
     nodeList[i].style.border= '1px solid #fff';
   }
