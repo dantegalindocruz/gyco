@@ -213,10 +213,9 @@ color: #fff;
     height: 50px;
     width: 100%;
     display: flex;
+    flex-direction: row;
     background-color: #000;
     justify-content: flex-end;
-    align-items: center;
-    padding-right: 10px;
   }
   .mobile-main{
     margin-top: 50px;
@@ -225,17 +224,16 @@ color: #fff;
   h1.mobile{
     color: #fff;
     font-size: 1.8rem;
-    flex-grow: 3;
+    flex-basis: 95%;
     align-self: center;
   }
 
   #hamburger-menu ul{
-    flex-grow:1;
-    padding-right: 15px;
+    flex-basis: 5%;
+    margin-right: 15px;
+    align-self: center;
     height: 30px;
     cursor: pointer;
-    align-self: center;
-    flex-basis: 40px;
   }
 
   #hamburger-menu #hamburger-icon{
@@ -247,6 +245,7 @@ color: #fff;
   #hamburger-menu ul li #hamburger-icon div{
     margin-bottom: 5px;
     border: 1px solid #fff;
+    width: 40px;
   }
 
   #hamburger-menu ul li #links{
@@ -255,14 +254,17 @@ color: #fff;
     height:100%;
     background-color: #000;
     position: fixed;
-    left: -700px;
+    left: -900px;
     top:51px;
   }
 
+  #hamburger-menu ul li #links li{
+    display: flex;
+  }
   #hamburger-menu ul li #links li a{
-    margin-left: 10px;
+    padding: 25px 0;
+    width:100%;
     display: block;
-    padding: 20px 0;
     height: 100px;
   }
 

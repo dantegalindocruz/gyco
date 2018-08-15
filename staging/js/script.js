@@ -5,7 +5,7 @@ var hamburgerMenuIcon = document.querySelectorAll('#hamburger-icon div');
 
 hamburgerMenu.addEventListener('click', (event) => {
        event.preventDefault();
-      if(links.style.left==="" || links.style.left==="-700px"){
+      if(links.style.left==="" || links.style.left==="-900px"){
         showMenu(links);
         changeIconColor(hamburgerMenuIcon);
       } else{
@@ -28,7 +28,7 @@ function showMenu(node) {
 }
 
 function hideMenu(node) {
-  node.style.left='-700px';
+  node.style.left='-900px';
   node.style.transition='.5s ease';
 }
 
