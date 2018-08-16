@@ -4,9 +4,24 @@
  box-sizing: border-box;
 }
 
-body{
+.hideMenu{
+  transition: left .5s ease;
+  left: -900px;
+
 }
 
+.showMenu{
+  transition: left .5s ease;
+  left: 0;
+}
+
+.changeIconColor{
+  border: 1px solid #E682FB;
+}
+
+.resetIconColor{
+  border: 1px solid #fff;
+}
 .space {
   padding: 15px 0;
 }
@@ -76,8 +91,12 @@ h1{
   display: none;
 }
 
-#active {
+.active {
   display: block;
+}
+
+.notActive{
+  display: none;
 }
 #slider{
  display: flex;
@@ -244,17 +263,16 @@ color: #fff;
 
   #hamburger-menu ul li #hamburger-icon div{
     margin-bottom: 5px;
-    border: 1px solid #fff;
     width: 40px;
   }
 
   #hamburger-menu ul li #links{
+    text-align: center;
     border: 1px solid #fff;
     width: 100%;
     height:100%;
     background-color: #000;
     position: fixed;
-    left: -900px;
     top:51px;
   }
 
