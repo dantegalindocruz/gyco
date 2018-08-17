@@ -40,7 +40,7 @@ font-family: 'Fugaz One', cursive;
 
 img{
   display: block;
-  border:1px solid #fff;
+  border:11px solid #ececec;
 }
 
 header{
@@ -147,7 +147,7 @@ h1{
 
 .content-box h3{
   margin-top: 5px;
-  font-size: 1.3em;
+  font-size: 0.9em;
 }
 
 #main-section ul{
@@ -194,6 +194,10 @@ margin-left: 10px;
   padding-left: 5px;
   height: 100px;
   margin-bottom: 20px;
+}
+
+#contact-section .content-box input[type="text"]{
+  border-radius: 5px;
 }
 
 #contact-section .content-box input[type="submit"]{
