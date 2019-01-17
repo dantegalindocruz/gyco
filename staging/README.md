@@ -28,4 +28,4 @@ Last month my friend Melanie and I were featured in _Chatter Magazine_ and I sha
 
 If you or someone else you know are in the Chattanooga area and are interested in participating in my <strong> Get Yo Craft On </strong> workshops, DM on Instagram @danteknits. 
 
-[Link to the webiste](https://danteknits.com/gyco/)
+[Link to the webiste](https://dantegalindocruz.github.io/gyco/staging/)
